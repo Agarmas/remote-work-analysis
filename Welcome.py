@@ -1,29 +1,25 @@
 import streamlit as st
-import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from .utils.load import load_data
 
 st.set_page_config(
     page_title='Welcome',
     page_icon=':wave:'
 )
 
-dtype_dict = {
-    'Employee_ID': 'int64',
-    'Employment_Type': 'category',
-    'Hours_Worked_Per_Week': 'int64',
-    'Productivity_Score': 'int64',
-    'Well_Being_Score': 'int64'
-}
-
-data = pd.read_csv('./remote_work_productivity.csv',
-                   index_col='Employee_ID', dtype=dtype_dict)
+data = load_data()
 
 st.title('Remote work productivity data')
 
 st.header('DataFrame')
 
 st.dataframe(data)
+
+st.header('DataFrame info')
+st.write(data.info)
+st.header('DataFrame describe')
+st.write(data.describe)
 
 st.header('Heatmap of Correlation Matrix')
 
