@@ -28,3 +28,6 @@ heatmap = sns.heatmap(correlation_matrix, annot=True,
                       cmap="coolwarm", linewidths=0.5)
 
 st.pyplot(plt)
+
+st.header('Pairplots')
+st.pyplot(sns.pairplot(data))

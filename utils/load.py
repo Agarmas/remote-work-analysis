@@ -1,8 +1,6 @@
 import pandas as pd
 
 
-import pandas as pd
-
 def load_data(path: str = './remote_work_productivity.csv') -> pd.DataFrame:
     """Load data from csv file and ensure scores are within valid range.
 
@@ -22,8 +20,9 @@ def load_data(path: str = './remote_work_productivity.csv') -> pd.DataFrame:
 
     data = pd.read_csv(path, index_col='Employee_ID', dtype=dtype_dict)
 
-    data['Productivity_Score'] = data['Productivity_Score'].clip(lower=0, upper=100)
-    data['Well_Being_Score'] = data['Well_Being_Score'].clip(lower=0, upper=100)
+    data['Productivity_Score'] = data['Productivity_Score'].clip(
+        lower=0, upper=100)
+    data['Well_Being_Score'] = data['Well_Being_Score'].clip(
+        lower=0, upper=100)
 
     return data
-
