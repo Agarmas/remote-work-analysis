@@ -1,7 +1,7 @@
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
-from .utils.load import load_data
+from utils.load import load_data
 
 st.set_page_config(
     page_title='Welcome',
@@ -16,10 +16,8 @@ st.header('DataFrame')
 
 st.dataframe(data)
 
-st.header('DataFrame info')
-st.write(data.info)
 st.header('DataFrame describe')
-st.write(data.describe)
+st.dataframe(data.describe())
 
 st.header('Heatmap of Correlation Matrix')
 

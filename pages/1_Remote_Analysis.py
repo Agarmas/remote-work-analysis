@@ -10,7 +10,5 @@ data = load_data()
 
 data = data[data['Employment_Type'] == 'Remote']
 
-st.header('DataFrame info')
-st.write(data.info)
 st.header('DataFrame describe')
-st.write(data.describe)
+st.dataframe(data.describe())
