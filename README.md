@@ -8,6 +8,10 @@ This project provides an interactive data analysis dashboard built with Streamli
 - **Data Visualization**: Utilize bar charts, line graphs, and heatmaps to uncover trends and insights.
 - **Simple and Fast**: Built using Python and Streamlit for fast and user-friendly interaction.
 
+# Web page deployed
+
+[Web page](https://agarmas-remote-work-analysis.streamlit.app/)
+
 ## License
 
 This project is open-sourced under the MIT License.
