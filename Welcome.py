@@ -24,8 +24,7 @@ st.header('Heatmap of Correlation Matrix')
 correlation_matrix = data.drop(columns=['Employment_Type']).corr()
 
 plt.figure(figsize=(10, 6))
-heatmap = sns.heatmap(correlation_matrix, annot=True,
-                      cmap="coolwarm", linewidths=0.5)
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", linewidths=0.5)
 
 st.pyplot(plt)
 
